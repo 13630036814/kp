@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gf.client"
+    android:versionCode="1"
+    android:versionName="1.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="5"
+        android:targetSdkVersion="19" />
+
+    <supports-screens
+        android:anyDensity="false"
+        android:largeScreens="true" />
+
+    <application
+        android:name="com.gf.control.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="com.gf.control.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+                        						<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+                        
+        <activity
+            android:name="com.gf.control.GfCommonLoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            
+
+
+        </activity>
+        <activity
+            android:name="com.gf.control.QutationHorizontal"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.gf.control.ForgetPassword"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.gf.control.SetNewPassword"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.gf.control.Regist"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.gf.control.PhoneLogin"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.gf.control.CustomPageEdit"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.gf.control.QuotationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="个股详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.gf.control.MarketQuotes"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="大盘行情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.gf.control.CodeLine"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="代码链"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.gf.control.trade.TradeLoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="交易登录"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.gf.control.trade.TradeMainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="交易主界面"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.gf.control.trade.StockTradeEntrustActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="股票买卖"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.gf.control.trade.query.StockTradeEntrustListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="委托撤单"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.gf.control.trade.ReservedEntrustActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="预约委托"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.gf.control.trade.query.TradeQueryFragmentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="综合查询"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.gf.control.trade.NewStockPurchaseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="新股申购"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.gf.control.trade.query.NewStockTradeListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="配号查询"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.gf.control.trade.query.NewStockTradeDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="配号明细"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.gf.control.trade.query.NewStockLimitListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="新股申购额度"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.gf.control.SettingCenter"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="设置中心"
+            android:screenOrientation="portrait" >
+            
+            
+        </activity>
+        
+        <activity
+            android:name="com.gf.control.MaSetting"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="MA均线参数"
+            android:screenOrientation="portrait" >
+            
+        </activity>
+        
+        <activity
+            android:name="com.gf.control.LoginTimeOutSetting"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="登录超时设置"
+            android:screenOrientation="portrait" >
+            
+        </activity>
+        
+        
+
+        <provider
+            android:name="com.gf.viewmodel.base.GfClientSqliteProvider"
+            android:authorities="com.gf.codeline" />
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="READ_PHONE_STATE" /> 
+
+</manifest>
